@@ -72,7 +72,7 @@ const RenderField = ({
       return (
         <FormControl>
           <PhoneInput 
-            defaultCountry="US"
+            defaultCountry="ID"
             placeholder={placeholder}
             international
             withCountryCallingCode
