@@ -19,6 +19,7 @@ import { decryptKey, encryptKey } from "@/lib/utils";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react"
+import TooltipInfo from "./TooltipInfo";
 
 const PasskeyModal = () => {
   const router = useRouter();
@@ -65,7 +66,14 @@ const PasskeyModal = () => {
       <AlertDialogContent className="shad-alert-dialog">
         <AlertDialogHeader>
           <AlertDialogTitle className="flex item-start justify-between">
-            Admin Acces Verification
+            <div className="flex items-center gap-1">
+              Admin Acces Verification
+              <TooltipInfo 
+                icon="/assets/icons/info.svg"
+                label="icon info"
+                message="passkey : 111-111"
+              />
+            </div>
             <Image
               src="/assets/icons/close.svg"
               alt="close"
